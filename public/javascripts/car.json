@@ -1,0 +1,596 @@
+{
+    "api": "mtop.trade.queryBag", 
+    "data": {
+        "cachedMeta": {
+            "httpCode": "200"
+        }, 
+        "controlParas": {
+            "eTag": "89aad893d739da8996a31be180f5a109", 
+            "orderByNative": {
+                "YY": "api.m.yao.95095.com"
+            }, 
+            "redWords": [
+                "双11", 
+                "双11全球狂欢节即将开始！"
+            ], 
+            "countdown": [
+                {
+                    "cdEnd": 1447257600000, 
+                    "end": 1447257599000, 
+                    "start": 1447243200000, 
+                    "text": "离双11结束还剩{hh}小时{mm}分{ss}秒"
+                }, 
+                {
+                    "end": 1447257900000, 
+                    "start": 1447257600000, 
+                    "text": "双11已结束，来年再见！"
+                }, 
+                {
+                    "cdEnd": 1447171200000, 
+                    "end": 1447170899000, 
+                    "start": 1447156800000, 
+                    "text": "离双11开始还有{hh}小时{mm}分{ss}秒"
+                }, 
+                {
+                    "end": 1447171199000, 
+                    "start": 1447170900000, 
+                    "text": "双11全球狂欢节即将开始！"
+                }
+            ], 
+            "time": 1445486281581, 
+            "invalidItemRecommendUrl": "//h5.m.taobao.com/app/searchsimilar/www/search_similar.html?from=cart&", 
+            "isSettlementAlone": true, 
+            "allowClearCache": true, 
+            "preLoadOpen": false, 
+            "useACDS": false, 
+            "orderByH5Urls": {
+                "YY": "//d.m.taobao.com/yao/proxy.htm?hex=n&use_cod=false&buyer_from=tmall_wap"
+            }, 
+            "findEntrenceRules": {
+                "findRecommendItemNum": 16, 
+                "findRecommendUrl": "//h5.m.taobao.com/alone/20141212/cartlist.html?"
+            }
+        }, 
+        "data": {
+            "shop_s_1129326215": {
+                "id": "shop_s_1129326215", 
+                "tag": "shop", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "天猫超市华南站", 
+                    "shopHost": "SM", 
+                    "shopName": "天猫超市华南站", 
+                    "shopId": "101975462", 
+                    "sellerId": 1129326215, 
+                    "showCheckBox": true, 
+                    "seller": "天猫超市华南站", 
+                    "checked": false, 
+                    "url": "//chaoshi.m.tmall.com/"
+                }
+            }, 
+            "itemOperate_150091177291_45458320894": {
+                "id": "itemOperate_150091177291_45458320894", 
+                "tag": "itemOperate", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "operateList": [
+                        {
+                            "name": "delete"
+                        }
+                    ]
+                }
+            }, 
+            "weight_136752770495_18098294338": {
+                "id": "weight_136752770495_18098294338", 
+                "tag": "weight", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "0.175kg", 
+                    "value": 175
+                }
+            }, 
+            "reduceItem": {
+                "id": "reduceItem", 
+                "tag": "reduceItem", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "降价宝贝(0)", 
+                    "value": 0, 
+                    "checked": false
+                }
+            }, 
+            "itemInfo_150091177291_45458320894": {
+                "id": "itemInfo_150091177291_45458320894", 
+                "tag": "itemInfo", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "美嘉瑞男士内裤男莫代尔四条礼盒装 青年秋季透气中腰平角四角裤", 
+                    "sellerNick": "美嘉瑞旗舰店", 
+                    "shopName": "美嘉瑞旗舰店", 
+                    "itemURL": "//a.m.taobao.com/i45458320894.htm", 
+                    "pic": "//img.alicdn.com/bao/uploaded/i1/2102042794/TB2wvekfVXXXXXOXXXXXXXXXXXX_!!2102042794.jpg_sum.jpg"
+                }
+            }, 
+            "confirmCart": {
+                "id": "confirmCart", 
+                "tag": "confirmCart", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "action": "", 
+                    "method": "", 
+                    "url": ""
+                }
+            }, 
+            "submit": {
+                "id": "submit", 
+                "status": "disable", 
+                "tag": "submit", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "结算(0)"
+                }
+            }, 
+            "activity": {
+                "id": "activity", 
+                "tag": "activity", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "text": "", 
+                    "textCloseDays": 0, 
+                    "pic": "", 
+                    "url": ""
+                }
+            }, 
+            "bundleQuantity_s_2102042794": {
+                "id": "bundleQuantity_s_2102042794", 
+                "tag": "bundleQuantity", 
+                "type": "biz", 
+                "editable": false, 
+                "fields": {
+                    "title": "共0件商品", 
+                    "quantity": 0
+                }
+            }, 
+            "quantity_150091177291_45458320894": {
+                "id": "quantity_150091177291_45458320894", 
+                "tag": "quantity", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "min": 1, 
+                    "max": 42, 
+                    "quantity": 1, 
+                    "multiple": 1
+                }
+            }, 
+            "quantity_136752770495_18098294338": {
+                "id": "quantity_136752770495_18098294338", 
+                "tag": "quantity", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "min": 1, 
+                    "max": 4038, 
+                    "quantity": 1, 
+                    "multiple": 1
+                }
+            }, 
+            "item_136752770495_18098294338": {
+                "id": "item_136752770495_18098294338", 
+                "tag": "item", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "valid": true, 
+                    "canBatchRemove": true, 
+                    "toBuy": "tmall", 
+                    "modifiedTime": 1439778582000, 
+                    "settlement": "18098294338_1_51840813335_null_0_null_null_136752770495_null_null_null_0_null_buyerCondition~0~~cartCreateTime~1439778582000_0_0_null_null_null_null_null", 
+                    "exclude": "SM", 
+                    "cartId": "136752770495", 
+                    "bundleType": "shop", 
+                    "itemId": "18098294338", 
+                    "mutex": "SM-1129326215", 
+                    "sellerId": 1129326215, 
+                    "shopId": "101975462", 
+                    "showCheckBox": true, 
+                    "bundleId": "s_1129326215", 
+                    "skuId": "51840813335", 
+                    "quantity": 1, 
+                    "checked": false
+                }
+            }, 
+            "sku_136752770495_18098294338": {
+                "id": "sku_136752770495_18098294338", 
+                "tag": "sku", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "口味:牛奶味", 
+                    "skuStatus": "CAN_CHANGE_SKU", 
+                    "skuId": "51840813335", 
+                    "areaId": "440303"
+                }
+            }, 
+            "checkAll": {
+                "id": "checkAll", 
+                "tag": "checkAll", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "全选", 
+                    "checked": false
+                }
+            }, 
+            "itemInfo_136752770495_18098294338": {
+                "id": "itemInfo_136752770495_18098294338", 
+                "tag": "itemInfo", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "【天猫超市】Aji-牛奶味大饼干牛乳大饼175g克早餐零食下午茶$", 
+                    "sellerNick": "天猫超市华南站", 
+                    "shopName": "天猫超市华南站", 
+                    "itemURL": "//page.m.tmall.com/chaoshi/detail.htm?id=18098294338", 
+                    "pic": "//img.alicdn.com/bao/uploaded/i2/TB1mg3kIVXXXXamaXXXXXXXXXXX_!!0-item_pic.jpg_sum.jpg"
+                }
+            }, 
+            "sku_150091177291_45458320894": {
+                "id": "sku_150091177291_45458320894", 
+                "tag": "sku", 
+                "type": "biz", 
+                "editable": false, 
+                "fields": {
+                    "title": "颜色分类:四方格黑+灰色羽毛+咖啡帆船+藏青帆船-13;尺码:XL", 
+                    "skuStatus": "CAN_NOT_CHANGE_SKU", 
+                    "skuId": "91165015611"
+                }
+            }, 
+            "promotionIcon_150091177291_45458320894": {
+                "id": "promotionIcon_150091177291_45458320894", 
+                "tag": "promotionIcon", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "iconList": [
+                        {
+                            "text": "手机专享价", 
+                            "textColor": "0000FF"
+                        }
+                    ]
+                }
+            }, 
+            "bundle_invalid": {
+                "id": "bundle_invalid", 
+                "tag": "bundle", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "valid": false, 
+                    "invalidCount": 1, 
+                    "invalidTitle": "您的购物车有1个商品已经失效", 
+                    "bundleId": "invalid"
+                }
+            }, 
+            "item_150091177291_45458320894": {
+                "id": "item_150091177291_45458320894", 
+                "tag": "item", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "titleInCheckBoxColor": "aaaaaa", 
+                    "invalidItemParamId": "45458320894_2102042794_50008882", 
+                    "valid": false, 
+                    "canBatchRemove": true, 
+                    "toBuy": "tmall", 
+                    "codeMsg": "对不起，宝贝已经卖光了", 
+                    "modifiedTime": 1443175452000, 
+                    "settlement": "45458320894_1_91165015611_null_0_null_null_150091177291_qianggou_null_null_0_null_buyerCondition~0~~cartCreateTime~1443175452000_0_0_null_null_null_null_null", 
+                    "exclude": "B", 
+                    "cartId": "150091177291", 
+                    "titleInCheckBox": "失效", 
+                    "bundleType": "shop", 
+                    "code": "CART_ITEM_QUANTITY_ZERO", 
+                    "itemId": "45458320894", 
+                    "mutex": "B", 
+                    "showCheckBox": true, 
+                    "sellerId": 2102042794, 
+                    "shopId": "111883678", 
+                    "bundleId": "s_2102042794", 
+                    "skuId": "91165015611", 
+                    "quantity": 1, 
+                    "checked": false
+                }
+            }, 
+            "bundlePay_s_2102042794": {
+                "id": "bundlePay_s_2102042794", 
+                "tag": "bundlePay", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "price": 0, 
+                    "priceTitle": "￥0.00"
+                }
+            }, 
+            "bundle_s_1129326215": {
+                "id": "bundle_s_1129326215", 
+                "tag": "bundle", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "valid": true, 
+                    "invalidCount": 0, 
+                    "bundleId": "s_1129326215"
+                }
+            }, 
+            "itemOperate_136752770495_18098294338": {
+                "id": "itemOperate_136752770495_18098294338", 
+                "tag": "itemOperate", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "operateList": [
+                        {
+                            "name": "edit"
+                        }, 
+                        {
+                            "name": "addFavor"
+                        }, 
+                        {
+                            "name": "delete"
+                        }
+                    ]
+                }
+            }, 
+            "itemPay_150091177291_45458320894": {
+                "id": "itemPay_150091177291_45458320894", 
+                "tag": "itemPay", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "totalFavorablePriceTitle": "￥37.00", 
+                    "totalFavorablePrice": 3700, 
+                    "price": 15800, 
+                    "favorablePrice": 3700, 
+                    "favorablePriceTitle": "￥37.00", 
+                    "isWapVIP": true, 
+                    "priceTitle": "￥158.00", 
+                    "quantity": 1
+                }
+            }, 
+            "itemPay_136752770495_18098294338": {
+                "id": "itemPay_136752770495_18098294338", 
+                "tag": "itemPay", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "totalFavorablePriceTitle": "￥4.90", 
+                    "totalFavorablePrice": 490, 
+                    "price": 730, 
+                    "favorablePrice": 490, 
+                    "favorablePriceTitle": "￥4.90", 
+                    "isWapVIP": false, 
+                    "priceTitle": "￥7.30", 
+                    "quantity": 1
+                }
+            }, 
+            "bundleQuantity_s_1129326215": {
+                "id": "bundleQuantity_s_1129326215", 
+                "tag": "bundleQuantity", 
+                "type": "biz", 
+                "editable": false, 
+                "fields": {
+                    "title": "共1件商品", 
+                    "quantity": 1
+                }
+            }, 
+            "bundleWeight_s_1129326215": {
+                "id": "bundleWeight_s_1129326215", 
+                "tag": "bundleWeight", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "0.175kg", 
+                    "value": 175
+                }
+            }, 
+            "shop_s_2102042794": {
+                "id": "shop_s_2102042794", 
+                "tag": "shop", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "美嘉瑞旗舰店", 
+                    "shopHost": "B", 
+                    "shopName": "美嘉瑞旗舰店", 
+                    "shopId": "111883678", 
+                    "sellerId": 2102042794, 
+                    "showCheckBox": true, 
+                    "seller": "美嘉瑞旗舰店", 
+                    "checked": false, 
+                    "url": "//shop.m.taobao.com/shop/shop_index.htm?shop_id=111883678"
+                }
+            }, 
+            "order_s_1129326215_0": {
+                "id": "order_s_1129326215_0", 
+                "tag": "order", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "price": 0, 
+                    "sellerId": 0, 
+                    "isRelationItem": false, 
+                    "rejectFavor": false, 
+                    "type": "biz::业务组件", 
+                    "orderId": "s_1129326215_0"
+                }
+            }, 
+            "realPay": {
+                "id": "realPay", 
+                "tag": "realPay", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "price": 0, 
+                    "priceTitle": "￥0.00", 
+                    "postTitle": "不含运费"
+                }
+            }, 
+            "stockItem": {
+                "id": "stockItem", 
+                "tag": "stockItem", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "库存紧张(0)", 
+                    "value": 0, 
+                    "checked": false
+                }
+            }, 
+            "coudan_s_1129326215": {
+                "id": "coudan_s_1129326215", 
+                "tag": "coudan", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "再买83.10元（10kg以内）包邮", 
+                    "url": "//chaoshi.m.tmall.com/coudan.htm?cartId=136752770495&logica=HN&smAreaId=440300&"
+                }
+            }, 
+            "realQuantity": {
+                "id": "realQuantity", 
+                "tag": "realQuantity", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "value": 0
+                }
+            }, 
+            "allItem": {
+                "id": "allItem", 
+                "tag": "allItem", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "title": "全部宝贝(2)", 
+                    "value": 2, 
+                    "checked": true
+                }
+            }, 
+            "bundlePay_s_1129326215": {
+                "id": "bundlePay_s_1129326215", 
+                "tag": "bundlePay", 
+                "type": "biz", 
+                "editable": true, 
+                "fields": {
+                    "price": 490, 
+                    "priceTitle": "￥4.90"
+                }
+            }
+        }, 
+        "excludes": {
+            "excludeTip": {
+                "HK": "亲，天猫国际的宝贝不能和其它店铺一起结算哦", 
+                "YY": "亲，天猫医药馆的宝贝不能和其它店铺一起结算哦", 
+                "HKDF": "亲，天猫国际免税店的宝贝不能和其他店铺一起结算哦", 
+                "SM": "亲，天猫商超的宝贝不能跨区域购买哦", 
+                "DEFAULT": "请分开结算普通商品、国际商品和医药馆商品"
+            }, 
+            "global": [
+                "HK", 
+                "YY", 
+                "HKDF"
+            ], 
+            "inner": {
+                "SM": [
+                    "SM-1955345225", 
+                    "SM-1129326215", 
+                    "SM-725677994"
+                ]
+            }, 
+            "innerGlobal": [
+                "HK", 
+                "HKDF"
+            ]
+        }, 
+        "feature": {
+            "gzip": true, 
+            "remoteCheck": false
+        }, 
+        "hierarchy": {
+            "structure": {
+                "confirmCart": [
+                    "activity", 
+                    "reduceItem", 
+                    "stockItem", 
+                    "allItem"
+                ], 
+                "bundle_s_1129326215": [
+                    "shop_s_1129326215", 
+                    "order_s_1129326215_0", 
+                    "bundleQuantity_s_1129326215", 
+                    "bundleWeight_s_1129326215", 
+                    "bundlePay_s_1129326215"
+                ], 
+                "bundle_invalid": [
+                    "item_150091177291_45458320894"
+                ], 
+                "shop_s_1129326215": [
+                    "coudan_s_1129326215"
+                ], 
+                "order_s_1129326215_0": [
+                    "item_136752770495_18098294338"
+                ], 
+                "item_136752770495_18098294338": [
+                    "itemInfo_136752770495_18098294338", 
+                    "sku_136752770495_18098294338", 
+                    "quantity_136752770495_18098294338", 
+                    "weight_136752770495_18098294338", 
+                    "itemPay_136752770495_18098294338", 
+                    "itemOperate_136752770495_18098294338"
+                ], 
+                "item_150091177291_45458320894": [
+                    "itemInfo_150091177291_45458320894", 
+                    "sku_150091177291_45458320894", 
+                    "quantity_150091177291_45458320894", 
+                    "itemPay_150091177291_45458320894", 
+                    "itemOperate_150091177291_45458320894", 
+                    "promotionIcon_150091177291_45458320894"
+                ], 
+                "allItem": [
+                    "bundle_s_1129326215", 
+                    "bundle_invalid", 
+                    "checkAll", 
+                    "realPay", 
+                    "realQuantity", 
+                    "submit"
+                ]
+            }, 
+            "root": "confirmCart"
+        }, 
+        "pageMeta": {
+            "checkMax": 50, 
+            "extStatus": 0, 
+            "isEndPage": true, 
+            "isExchangeIdentity": false, 
+            "isNext": true, 
+            "pageNo": 1, 
+            "pageSize": 50, 
+            "startTimestamp": "2015-08-17 10:29:42", 
+            "totalCount": 2
+        }, 
+        "reload": false
+    }, 
+    "ret": [
+        "SUCCESS::调用成功"
+    ], 
+    "v": "4.1"
+}

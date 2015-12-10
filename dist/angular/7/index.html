@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta name="apple-mobile-web-app-title" content="过滤器">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+		<title>angular-7</title>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/lib/buttons/buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>过滤器</h1>
+			<div class="container" ng-controller="filterController">
+				<h3>{{name | uppercase}}</h3>
+				<h2>{{12345.678 | number:2}}</h2>
+				<h4>{{123 | currency:'￥'}}</h4>
+				<h3>时间格式化</h3>
+				<p>{{ today | date:'medium' }} <!-- Aug 09, 2013 12:09:02 PM --></p>
+				<p>{{ today | date:'short' }} <!-- 8/9/1312:09PM --></p>
+				<p>{{ today | date:'fullDate' }} <!-- Thursday, August 09, 2013 --></p>
+				<p>{{ today | date:'longDate' }} <!-- August 09, 2013 --></p>
+				<p>{{ today | date:'mediumDate' }}<!-- Aug 09, 2013 --></p>
+				<p>{{ today | date:'shortDate' }} <!-- 8/9/13 --></p>
+				<p>{{ today | date:'mediumTime' }}<!-- 12:09:02 PM --></p>
+				<p>{{ today | date:'shortTime' }} <!-- 12:09 PM --></p>
+				
+				<p>常用格式 ：{{ today | date:'yyyy-MM-dd hh:mm:ss.sss' }} <!-- 12:09:02.995 --> </p>
+				
+				<h3>filter参数类型 ：字符串  ， 对象 ，函数</h3>
+				<p>{{ ['Ari','Lerner','Likes','To','Eat','Pizza'] | filter:'e' }}<!-- ["Lerner","Likes","Eat"] --></p>
+				<p>{{ [{
+						'name': 'Ari',
+						'City': 'San Francisco',
+						'favorite food': 'Pizza'
+						},{
+						'name': 'Nate',
+						'City': 'San Francisco',
+						'favorite food': 'indian food'
+						}] | filter:{'favorite food': 'Pizza'} }}
+						<!-- [{"name":"Ari","City":"SanFrancisco","favoritefood":"Pizza"}] --></p>
+				<p>{{ ['Ari','likes','to','travel'] | filter:isCapitalized }}<!-- ["Ari"] --></p>
+				
+				<p>orderBy : <br />
+					{{ [{
+					'name': 'Ari',
+					'status': 'awake'
+					},{
+					'name': 'Q',
+					'status': 'sleeping'
+					},{
+					'name': 'Nate',
+					'status': 'awake'
+					}] | orderBy:'name' }}
+					<!--
+					[
+					{"name":"Ari","status":"awake"},
+					{"name":"Nate","status":"awake"},
+					{"name":"Q","status":"sleeping"}
+					]
+					-->
+				</p>
+				<p>自定义过滤器：<!-- Ginger loves dog treats -->{{ 'ginger loves dog treats' | lowercase | capitalize }}</p>				
+			</div>
+			<h1>表单验证</h1>
+			<div class="container" ng-controller="formController">
+				<form action="/angular/signup" name="form" method="post" ng-submit="signupForm()" novalidate>
+					<div class="form-group">
+						<label for="">必填项</label><input type="text" name="reqired" required class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="">最小长度</label><input type="text" name="minlen" ng-minlength="5" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="">最大长度</label><input type="text" name="maxlen" ng-maxlength="5" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="">模式匹配</label><input type="text" name="pattern"  class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="">用户名</label><input type="text" name="username" placeholder="Desired username" ng-model="user.username" ng-minlength="3" ng-maxlength="20" ensure-unique="username" required class="form-control" />
+						<div class="error" ng-show="form.username.$dirty && form.username.$invalid">
+							<small class="error" ng-show="form.username.$error.required">
+								Your username is required.
+							</small>
+							<small class="error" ng-show="form.username.$error.minlength">
+								Your username is required to be at least 3 characters
+							</small>
+							<small class="error" ng-show="form.username.$error.maxlength">
+								Your username cannot be longer than 20 characters
+							</small>
+							<small class="error" ng-show="form.username.$error.unique">
+								That username is taken, please try another
+							</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">电子邮件</label><input type="email" name="email" ng-model="user.email" ng-minlength="3" ng-maxlength="20" required class="form-control" />
+						<div class="error" ng-show="form.email.$dirty && form.email.$invalid">
+							<small class="error"
+							ng-show="form.email.$error.required">
+							Your email is required.
+							</small>
+							<small class="error"
+							ng-show="form.email.$error.minlength">
+							Your email is required to be at least 3 characters
+							</small>
+							<small class="error"
+							ng-show="form.email.$error.maxlength">
+							Your email cannot be longer than 20 characters
+							</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">数字</label><input type="number" name="age" ng-model="user.age" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="">url</label><input type="url" name="homepage" ng-model="user.facebook_url"  class="form-control" />
+					</div>
+					<button type="submit" class="button button-primary button-rounded">Submit</button>
+				</form>
+			</div>
+		</div>
+		<script src="/lib/angular-1.3.0-beta.14/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/angular-1.3.0-beta.14/angular-messages.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/jquery-master/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/bootstrap-3.3.4-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

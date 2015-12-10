@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta name="apple-mobile-web-app-title" content="原型继承">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+		<title>angular-9</title>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/lib/buttons/buttons.css"/>
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>原型继承</h1>
+			<h2>1.属性继承</h2>
+			<div ng-controller="someController">
+				{{ someModel.someValue }} <br />
+				<button class="button button-action" ng-click="someAction()">Communicate to child</button>
+				<div ng-controller="childController">
+					{{ someModel.someValue }} <br />
+					<button class="button button-action" ng-click="childAction()">Communicate to parent</button>
+				</div>
+			</div>
+			<h2>2.原型继承的关系</h2>
+			<div ng-controller="SomeController">
+				<div class="form-group">
+					{{ someBareValue }} <br />
+					<button ng-click="someAction()" class="button button-action">Communicate to child</button>		
+				</div>
+				<div ng-controller="ChildController">
+					{{ someBareValue }} <br />
+					<button ng-click="childAction()" class="button button-action">Communicate to parent</button>
+				</div>
+			</div>
+		</div>
+		<script src="/lib/angular-1.3.0-beta.14/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/angular-1.3.0-beta.14/angular-messages.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/jquery-master/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/bootstrap-3.3.4-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="two.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

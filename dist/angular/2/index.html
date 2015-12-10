@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+<meta name="apple-mobile-web-app-title" content="双向数据绑定">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+		<title>angular-2</title>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/lib/buttons/buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<h1>双向数据绑定</h1>
+		<div class="container">
+			<h1>计时器</h1>
+			<div ng-controller="MyController">
+				<h1>{{clock.now}}</h1>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-9 col-md-6 col-lg-3">
+					<div class="form-group">
+						<input class="form-control" type="text" ng-model="person.name" placeholder="You name" />
+					</div>
+					<h1>Hello {{person.name}}</h1>
+				</div>
+			</div>
+			<h3>牛逼</h3>
+		</div>
+		<script src="/lib/angular-1.3.0-beta.14/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/angular-1.3.0-beta.14/angular-messages.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/jquery-master/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/bootstrap-3.3.4-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

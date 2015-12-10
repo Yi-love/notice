@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta name="apple-mobile-web-app-title" content="向指令中传递数据">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+		<title>angular-8</title>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/lib/buttons/buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>8.2 向指令中传递数据</h1>
+			<div class="container">
+				<div my-directive my-url="http://google.com" my-link-text="Click me to go to Google"></div>
+			</div>
+			
+			<h2>数据绑定</h2>
+			<div class="form-group">
+				<label>Their URL field:</label>
+				<input type="text" ng-model="theirUrl" class="form-control">
+				<div my-directivetwo some-attr="theirUrl" my-link-text="Click me to go to Google"></div>
+			</div>
+		</div>
+		<script src="/lib/angular-1.3.0-beta.14/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/angular-1.3.0-beta.14/angular-messages.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/jquery-master/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/bootstrap-3.3.4-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="two.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

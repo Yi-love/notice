@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta name="apple-mobile-web-app-title" content="指令">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+		<title>angular-8</title>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap-3.3.4-dist/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/lib/buttons/buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>指令</h1>
+			<div class="container">
+				<h3>1.自定义指令</h3>
+				<h5>E : 元素指令</h5>
+				<my-directive></my-directive>
+				<h5> A： 属性指令</h5>
+				<div my-directive>属性指令</div><br />
+				<h5>C: calss指令</h5>
+				<div class="my-directive"></div>
+				<h5>M：注释指令</h5>
+				<!-- directive:my-directive -->
+				
+				<h3>指令表达式</h3>
+				<h5 ng-init="greeting='HelloWorld'">
+					The greeting is: {{ greeting }}
+				</h5>
+			</div>
+			
+			<div class="container">
+				<h3>2.当前作用域介绍</h3>
+				<p>We can access: {{ rootProperty }}</p>
+				<div ng-controller="parentController">
+					<p>We can access: {{ rootProperty }} and {{ parentProperty }}</p>
+					<div ng-controller="childController">
+						<p>
+							We can access:
+							{{ rootProperty }} and
+							{{ parentProperty }} and
+							{{ childProperty }}
+						</p>
+						<p>{{ fullSentenceFromChild }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/lib/angular-1.3.0-beta.14/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/angular-1.3.0-beta.14/angular-messages.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/jquery-master/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/lib/bootstrap-3.3.4-dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+
