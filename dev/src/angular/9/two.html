@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "原型继承"})
+		<title>angular-9</title>
+		@@include('./style.html')
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>原型继承</h1>
+			<h2>1.属性继承</h2>
+			<div ng-controller="someController">
+				{{ someModel.someValue }} <br />
+				<button class="button button-action" ng-click="someAction()">Communicate to child</button>
+				<div ng-controller="childController">
+					{{ someModel.someValue }} <br />
+					<button class="button button-action" ng-click="childAction()">Communicate to parent</button>
+				</div>
+			</div>
+			<h2>2.原型继承的关系</h2>
+			<div ng-controller="SomeController">
+				<div class="form-group">
+					{{ someBareValue }} <br />
+					<button ng-click="someAction()" class="button button-action">Communicate to child</button>		
+				</div>
+				<div ng-controller="ChildController">
+					{{ someBareValue }} <br />
+					<button ng-click="childAction()" class="button button-action">Communicate to parent</button>
+				</div>
+			</div>
+		</div>
+		@@include('./js.html')
+		<script src="two.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

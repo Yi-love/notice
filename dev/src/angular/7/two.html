@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "表单验证"})
+		<title>angular-7</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>表单验证</h1>
+			<form action="/angular/signup" name="signup_form" method="post" ng-submit="signupForm()" ng-controller="signupController">
+				<div class="form-group">
+					<label>Your name</label>
+					<input type="text" placeholder="Name" name="name" ng-model="signup.name" ng-minlength=3 ng-maxlength=20 required class="form-control" />
+					<div class="error" ng-messages="signup_form.name.$error" ng-messages-multiple ng-messages-include="errors.html"></div>
+				</div>
+				<button type="submit" class="button button-primary button-rounded">Submit</button>
+			</form>
+		</div>
+		@@include('./js.html')
+		<script src="two.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

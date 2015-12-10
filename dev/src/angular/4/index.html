@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "作用域"})
+		<title>angular-4</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>作用域</h1>
+			<div ng-app="myApp">
+				<div class="" ng-controller="myController">
+					<h1>Hell {{name}}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="cssbase64"></div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		@@include('./meta.html', {"title" : "双向数据绑定"})
+		<title>angular-2</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<h1>双向数据绑定</h1>
+		<div class="container">
+			<h1>计时器</h1>
+			<div ng-controller="MyController">
+				<h1>{{clock.now}}</h1>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-9 col-md-6 col-lg-3">
+					<div class="form-group">
+						<input class="form-control" type="text" ng-model="person.name" placeholder="You name" />
+					</div>
+					<h1>Hello {{person.name}}</h1>
+				</div>
+			</div>
+			<h3>牛逼</h3>
+		</div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "控制器"})
+		<title>angular-5</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>控制器</h1>
+			<div ng-controller="firstController" class="col-xs-12">
+				<h4>The simplest adding machine ever</h4>
+				<input type="text" class="form-control" ng-model="counter" /><br />
+				<button class="button button-primary" ng-click="add(1)">Add</button>
+				<a class="button button-caution" ng-click="subtract(1)">Subtract</a>
+				<h4>Current count : {{counter}}</h4>
+			</div>
+			<h1>控制器嵌套</h1>
+			<div ng-controller="parentController">
+				<div ng-controller="childController">
+					<a class="button button-action" ng-click="sayHello()">Say Hello</a>
+				</div>
+				{{person}}
+			</div>
+		</div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

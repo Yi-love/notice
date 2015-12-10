@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "指令"})
+		<title>angular-8</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>指令</h1>
+			<div class="container">
+				<h3>1.自定义指令</h3>
+				<h5>E : 元素指令</h5>
+				<my-directive></my-directive>
+				<h5> A： 属性指令</h5>
+				<div my-directive>属性指令</div><br />
+				<h5>C: calss指令</h5>
+				<div class="my-directive"></div>
+				<h5>M：注释指令</h5>
+				<!-- directive:my-directive -->
+				
+				<h3>指令表达式</h3>
+				<h5 ng-init="greeting='HelloWorld'">
+					The greeting is: {{ greeting }}
+				</h5>
+			</div>
+			
+			<div class="container">
+				<h3>2.当前作用域介绍</h3>
+				<p>We can access: {{ rootProperty }}</p>
+				<div ng-controller="parentController">
+					<p>We can access: {{ rootProperty }} and {{ parentProperty }}</p>
+					<div ng-controller="childController">
+						<p>
+							We can access:
+							{{ rootProperty }} and
+							{{ parentProperty }} and
+							{{ childProperty }}
+						</p>
+						<p>{{ fullSentenceFromChild }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "表达式"})
+		<title>angular-6</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>表达式</h1>
+			<h3>6.1解析angular表达式</h3>
+			<div ng-controller="myController">
+				<input type="text" ng-model="expr" class="form-control" placeholder="Enter an expression" />
+				<h2>{{parseValue}}</h2>
+			</div>
+			<h3>6.2插入字符串</h3>
+			<div ng-controller="interpolateController">
+				<input type="email" class="form-control" ng-model="to" placeholder="email example@xx.com" /><br />
+				<textarea name="" ng-model="emailBody" rows="6" cols="30" class="form-control"></textarea><br />
+				<pre>{{previewText}}</pre>
+			</div>
+			<h3>插入字符串服务化</h3>
+			<div ng-controller="parseController">
+				<input type="email" class="form-control" ng-model="emailTo" placeholder="email example@xx.com" /><br />
+				<textarea name="" ng-model="emailBody" rows="6" cols="30" class="form-control"></textarea><br />
+				<pre>{{previewText}}</pre>
+			</div>
+		</div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

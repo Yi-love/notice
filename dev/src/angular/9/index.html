@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "内置指令"})
+		<title>angular-9</title>
+		@@include('./style.html')
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>内置指令</h1>
+			<h2>布尔属性</h2>
+			<div class="contanier">
+				<h3>1.  ng-disabled</h3>
+				<textarea class="form-control" ng-disabled="isDisabled">Wait 5 seconds</textarea>
+				<h3>2.  ng-readonly</h3>
+				<p>Type here to make sibling readonly:</p>
+				<input type="text" ng-model="somePropertyone" class="form-control"><br/>
+				<input type="text" ng-readonly="somePropertyone" value="Some text here" class="form-control" />
+				<h3>3.  ng-checked</h3>
+				<div class="form-group">
+					<label>someProperty = {{someProperty}}</label>
+					<input type="checkbox"  ng-checked="someProperty" ng-init="someProperty = true" ng-model="someProperty">
+					<label>someProperty = {{anotherProperty}}</label>
+					<input type="checkbox" ng-checked="anotherProperty" ng-init="anotherProperty = false" ng-model="anotherProperty">
+				</div>
+				<h3 class="">4.  ng-selected</h3>
+				<div class="form-group">
+					<label>Select Two Fish:</label>
+					<input type="checkbox" ng-model="isTwoFish"><br/>
+					<select>
+						<option>One Fish</option>
+						<option ng-selected="isTwoFish">Two Fish</option>
+					</select>
+				</div>
+			</div>
+			<h2>类布尔属性</h2>
+			<div class="container">
+				<h3>1. ng-href</h3>
+				<a ng-href="{{ myHref }}">I'm feeling lucky, when I load</a>
+				<a href="{{ myHref }}">I'm feeling 404</a>
+				<h3>2. ng-src</h3>
+				<p>WrongWay</p>
+				<img src="{{imgSrc}}" height="200"/>
+				<p>Rightway</p>
+				<img ng-src="{{imgSrc}}" height="200"/>
+			</div>
+		</div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+
