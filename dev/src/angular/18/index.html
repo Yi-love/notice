@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "服务器通讯"})
+		<title>angular-18</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body ng-app="myApp">
+		<div class="container" ng-controller="HomeController">
+			<h3>Button hits {{hits}}</h3>
+			<button class="button button-primary" ng-click="registerHit()">HIT ME , if yu dare</button>
+		</div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

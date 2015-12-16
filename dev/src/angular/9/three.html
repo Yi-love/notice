@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		@@include('./meta.html', {"title" : "内置指令"})
+		<title>angular-9</title>
+		@@include('./style.html')
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container" ng-app="app">
+			<h1>内置指令</h1>
+			<h3>3.  ng-include</h3>
+			<div class="container">
+				<div ng-include="myTemplateName.html" ng-controller="MyController" ng-init="name = 'World'">
+					Hello {{ name }}
+				</div>
+			</div>
+			<h3>4. ng-switch</h3>
+			<div class="container">
+				<input type="text" ng-model="personone.name" class="form-control"/>
+				<div ng-switch on="personone.name">
+					<p ng-switch-default>And the winner is</p>
+					<h1 ng-switch-when="Ari">{{ personone.name }}</h1>
+				</div>
+			</div>
+			<h3>5. ng-if</h3>
+			<div class="container">
+				<div ng-if="2+2===5">
+					Won't see this DOM node, not even in the source code
+				</div>
+				<div ng-if="2+2===4">
+					Hi, I do exist
+				</div>
+			</div>
+			<h3>6. ng-repeat</h3>
+			<div class="container">
+				<ul ng-controller="peopleController">
+					<li ng-repeat="person in people" ng-class="{even:!$even , odd:!$odd}">
+						{{person.name}} lives in {{person.city}}
+					</li>
+				</ul>
+			</div>
+			<h3>7. ng-init</h3>
+			<div class="container">
+				<div ng-init="greeting='Hello';person='World'">
+					{{greeting}} {{person}}
+				</div>
+			</div>
+			<h3>8. { { }}  和 ng-bind</h3>
+			<div class="container">
+				<div ng-init="greeting='HelloWorld'">
+					{{ greeting }}
+				</div>
+				<div ng-init="greeting='HelloWorld'">
+					<p ng-bind="greeting"></p>
+				</div>
+			</div>
+			<h3>9. ng-cloak</h3>
+			<div class="container">
+				<div ng-init="greeting='HelloWorld'">
+					<p ng-cloak>{{ greeting }}</p>
+				</div>
+			</div>
+			<h3>10. ng-bind-template</h3>
+			<div class="container">
+				<div ng-init="message='HelloWorld';myname='jin'">
+					<p ng-bind-template="{{message}} {{myname}}"></p>
+				</div>
+			</div>
+			<h3>11. ng-show/ng-hide</h3>
+			<div class="container">
+				<div ng-show="2+2 == 5">
+					2+2 isn't 5 , don't show
+				</div>
+				<div ng-show="2 + 2 == 4">
+					2 + 2 is 4, do show
+				</div>
+				<div ng-hide="2 + 2 == 5">
+					2 + 2 isn't 5, don't hide
+				</div>
+				<div ng-hide="2 + 2 == 4">
+					2 + 2 is 4, do hide
+				</div>
+			</div>
+			<h3>12. ng-change</h3>
+			<div class="container">
+				<div ng-controller="equationController">
+					<input type="text" ng-model="equation.x" ng-change="change()" class="form-control" />
+					<code>{{equation.output}}</code>
+				</div>
+			</div>
+			<h3>13. ng-form</h3>
+			<div class="container">
+				<form name="signup_form" ng-controller="formController" ng-submit="submitForm()" novalidate>
+					<div ng-repeat="field in fields" ng-form="signup_form_input" class="form-group">
+						<input type="text" class="form-control" name="dynamic_input" ng-required="field.isRequired" ng-model="field.name" placeholder="{{field.placeholder}}" />
+						<div ng-show="signup_form_input.dynamic_input.$dirty && signup_form_input.dynamic_input.$invalid">
+							<span class="error" ng-show="signup_form_input.dynamic_input.$error.required">
+								The field is required.
+							</span>
+						</div>
+					</div>
+					<button type="submit" ng-disabled="signup_form.$invalid" class="button button-primary">Submit All</button>
+				</form>
+			</div>
+			<h3>17. ng-click</h3>
+			<div class="container">
+				<div ng-controller="counterController" class="form-group">
+					<button ng-click="count=count+1" ng-init="count=0" class="button button-primary">Increment</button>
+					<p>count: {{count}}</p>
+					<button ng-click="decrement()" class="button button-glow button-rounded button-caution">Decrement</button>
+				</div>
+			</div>
+			<h3>18. ng-select</h3>
+			<div class="container">
+				<div ng-controller="cityController">
+					<select ng-model="city" ng-options="city.name for city in cities">
+						<option value="">Choose City</option>
+					</select>
+					 <p>Bast City {{city.name}}</p>
+				</div>
+			</div>
+			<br />
+		</div>
+		@@include('./js.html')
+		<script src="three.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

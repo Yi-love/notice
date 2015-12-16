@@ -21,26 +21,28 @@ var root = {
 		dist : 'dist',  //线上目录
 		images : 'dev/images' ,//图片目录
 		lib  : 'dev/lib', //库文件目录
+		sources : 'dev/sources', //资源文件目录
 		host : 'localhost:3000' //代理服务器域名 or ip
 	};
 	
 /**
  * 测试环境任务
- * 任务：  js检测 , sass编译 ，html文件合并注入 , 图片压缩 ,库文件复制
+ * 任务：  js检测 , sass编译 ，html文件合并注入 , 图片压缩 ,库文件复制, 资源文件复制
  */
-gulp.task('build' , ['jshint','sass' , 'html', 'buildimagemin' , 'buildlib']);
+gulp.task('build' , ['jshint','sass' , 'html', 'buildimagemin' , 'buildlib','buildsources']);
 /**
  * 线上环境任务
- * 任务： js压缩 ，sass编译压缩 , html文件合并注入 , 图片压缩 ,库文件复制
+ * 任务： js压缩 ，sass编译压缩 , html文件合并注入 , 图片压缩 ,库文件复制 , 资源文件复制
  */
- gulp.task('dist' , ['jsminify','cssminify' , 'fileinclude', 'distimagemin' , 'distlib']);
- 
- 
+ gulp.task('dist' , ['jsminify','cssminify' , 'fileinclude', 'distimagemin' , 'distlib' ,'distsources']);
+
+
 /*********************start 测试环境配置********************************/
 /**
  * 本地时时刷新服务
  * cmd : gulp server
  * author:jin
+ * 与  supervisor  --watch routes,views ./bin/www   效果更好
  */
 gulp.task('server' , ['build'] , function(){
 	browserSync.init(root.build+'/**/*.{css|js|html}' , {
@@ -51,8 +53,8 @@ gulp.task('server' , ['build'] , function(){
 	gulp.watch(root.src+'/**/*.scss' , ['sass']);
     gulp.watch(root.src+'/**/*.html' , ['html']);
     gulp.watch(root.src+'/**/*.js' , ['jshint']);
-    //测试目录html文件发生变化，重新加载
-    gulp.watch(root.build+'/**/*.html').on('change' ,reload);
+    //监听服务器文件变化
+    gulp.watch('routes/**/*.js').on('change' , reload);
 });
 
 /**
@@ -123,7 +125,16 @@ gulp.task('buildlib', function(){
     	.pipe(changed(root.build+'/lib'))
     	.pipe(gulp.dest(root.build+'/lib'));
 });
-
+/**
+ * 复制资源文件到测试目录
+ * cmd : gulp buildsources
+ * author : jin
+ */
+gulp.task('buildsources', function(){
+    return gulp.src(root.sources+'/**/*.*')
+    	.pipe(changed(root.build+'/sources'))
+    	.pipe(gulp.dest(root.build+'/sources'));
+});
 /*******************end****************************************/
 
 
@@ -193,7 +204,7 @@ gulp.task('distimagemin', function(){
         .pipe(gulp.dest(root.dist+'/images'));
 });
 /**
- * 复制库文件到测试目录
+ * 复制库文件到线上目录
  * cmd : gulp distlib
  * author : jin
  */
@@ -201,6 +212,16 @@ gulp.task('distlib', function(){
     return gulp.src(root.lib+'/**/*.*')
     	.pipe(changed(root.dist+'/lib'))
     	.pipe(gulp.dest(root.dist+'/lib'));
+});
+/**
+ * 复制资源文件到线上目录
+ * cmd : gulp distsources
+ * author : jin
+ */
+gulp.task('distsources', function(){
+    return gulp.src(root.sources+'/**/*.*')
+    	.pipe(changed(root.dist+'/sources'))
+    	.pipe(gulp.dest(root.dist+'/sources'));
 });
 
 /********************end********************/

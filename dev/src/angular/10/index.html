@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		@@include('./meta.html', {"title" : "指令详解"})
+		<title>angular-10</title>
+		@@include('./style.html')
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>指令详解</h1>
+			<div class="row">
+				<div class="container" ng-app="app">
+					<h3>10.2.2 隔离作用域</h3>
+					<div ng-init="myProperty='wow,thisiscool'">
+						Surrounding scope: {{ myProperty }}
+						<div my-inherit-scope-directive></div>
+						<div my-directive></div>
+					</div>
+					<h3>10.3.1  transclude</h3>
+					<div sidebox title="Links">
+						<ul>
+							<li>First link</li>
+							<li>Second link</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('./js.html')
+		<script src="index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
