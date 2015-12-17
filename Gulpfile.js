@@ -79,7 +79,7 @@ gulp.task('html' , function(){
  */
 gulp.task('sass', function () {
     return gulp.src(root.src+'/**/*.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(cssbase64())
         .pipe(changed(root.build))
@@ -107,11 +107,11 @@ gulp.task('jshint' , function(){
  */
 gulp.task('buildimagemin', function(){
     return gulp.src(root.images+'/**/*.*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
+//      .pipe(imagemin({
+//          progressive: true,
+//          svgoPlugins: [{removeViewBox: false}],
+//          use: [pngquant()]
+//      }))
         .pipe(changed(root.build+'/images'))
         .pipe(gulp.dest(root.build+'/images'));
 });
@@ -160,7 +160,7 @@ gulp.task('fileinclude' , function(){
  */
 gulp.task('cssminify' , function(){
 	return gulp.src(root.src+'/**/*.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer()) //添加css3浏览器兼容
         .pipe(cssbase64())
         .pipe(rename(function(path){ //改名
@@ -195,12 +195,12 @@ gulp.task('jsminify' , function(){
  */
 gulp.task('distimagemin', function(){
     return gulp.src(root.images+'/**/*.*')
+    	.pipe(changed(root.build+'/images'))
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(changed(root.dist+'/images'))
         .pipe(gulp.dest(root.dist+'/images'));
 });
 /**
