@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["angular/4/index.min.css"],"sourcesContent":["body{background:#AFE24D}h1{color:red;font-size:60px;text-shadow:0 0 6px #500;-webkit-transform:auto;transform:auto}.cssbase64{background:url(../../images/git.png);width:400px;height:400px}"],"file":"angular/4/index.min.css","sourceRoot":"/source/"}
