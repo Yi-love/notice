@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>bee</title>
-	<script src="bee.master.js"></script>
+	<title>Document</title>
+	<script src="../core/bee.js"></script>
+	<script src="../core/event.js"></script>
 </head>
 <body>
 	<h2>Event</h2>
@@ -34,26 +35,4 @@
 		$('#del').html($(this).html());
 	})
 </script>
-<script>
-	$.jsonp({
-		url:'https://api.dotdotbuy.com/run/go/rest/',
-		data : {
-			prefix : 'TB',
-			cid : '50012036',
-			title : "New Balance/NB 574波点系列男鞋女鞋复古鞋跑步鞋运动鞋MFL574HY",
-			biz_method : 'verify_goods'
-		},
-		jsonp :'jsonp',
-		success : function(result , e , options){
-			console.log(result , e ,options);
-		}
-	})
-	$.ajax({
-		url:'http://hws.m.taobao.com/cache/wdetail/5.0/',
-		data :{id : '523837853832'},
-		success : function(result){
-			console.log(result);
-		}
-	})
-	</script>
 </html>
