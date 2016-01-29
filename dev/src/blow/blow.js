@@ -73,8 +73,8 @@ function getOffset(element){
 	var top = 0 , left = 0;
 	if ( element ) {
 		while ( element != body && element != document ){
-			top += +element.offsetTop;
-			left += +element.offsetLeft;
+			top = +element.offsetTop > top ? +element.offsetTop : top;
+			left = +element.offsetLeft > left ? +element.offsetLeft : left;
 			element = element.parentNode;
 		}
 	}
