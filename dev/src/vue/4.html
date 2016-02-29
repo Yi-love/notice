@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>条件判断</title>
+	</head>
+	<body>
+		<h2>条件判断</h2>
+		<div id="vif">
+			<h3>if用法</h3>
+			{{if ok}}
+			  <p>Yes is ok</p>
+			{{if}}
+			<p v-if="ok">Yes is ok too</p>
+			<p v-if="jin">is jin</p>
+			<p v-else>no</p>
+			<h3>template v-if</h3>
+			<div v-if="temp">
+				<p>is template</p>
+				<p>yes</p>
+				<p>ok </p>
+			</div>
+		</div>
+		
+		<h2>v-Show 不支持template</h2>
+		<div id="vshow">
+			<p v-show="soul">show this p</p>
+		</div>
+	</body>
+	<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#vif',
+			data : {
+				ok : true,
+				jin:false,
+				temp : true
+			}
+		});
+		new Vue({
+			el:'#vshow',
+			data : {
+				soul : true
+			}
+		})
+	</script>
+</html>

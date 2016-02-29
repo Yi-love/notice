@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表渲染</title>
+	</head>
+	<body>
+		<h2>v-for</h2>
+		<div id="vfor">
+			<ul>
+				<li v-for="item in names">
+					{{pre}} :  {{item}}--- {{$index == 2 ? $index : ''}}
+				</li>
+			</ul>
+		</div>
+		
+		<h2>template v-for</h2>
+		<div id="tvfor">
+			<ul>
+				<template v-for="item in items">
+					<li><span>{{item.prename}}</span><span>{{item.lastname}}</span></li>
+				</template>
+			</ul>
+		</div>
+		
+		<h2>track-by</h2>
+		<div id="trackby">
+			<ul>
+				<li v-for="item in items" track-by="_uid">{{item._uid}}: {{item.name}}</li>
+			</ul>
+			<button v-on:click="getData">getData</button>
+		</div>
+		<h2>对象 v-for</h2>
+		<div id="ovfor">
+			<ul>
+				<li v-for="value in object">
+					{{$key}} : {{value}}
+				</li>
+			</ul>
+			<div>
+			  <span v-for="n in 10">{{ n }} </span>
+			</div>
+		</div>
+	</body>
+	<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#vfor',
+			data : {
+				pre: 'you name is ',
+				names : ['aaa','bbb','cccc']
+			}
+		});
+		new Vue({
+			el:'#tvfor',
+			computed : {
+				items : function(){
+					return [{prename : 'yang' ,lastname:'yi'},{prename:'shu' , lastname:'dong'}].reverse()
+				}
+			}
+		});
+		
+		new Vue({
+			el:'#trackby',
+			data : {
+				items:[
+					{_uid:'0000',name:'jin'},
+					{_uid:'0001',name:'soul'}
+				]
+			},
+			methods:{
+				getData : function(){
+					return this.items = [{_uid:'0000',name:'jin'},{_uid:'0002',name:'YY'}]
+				}
+			}
+		});
+		new Vue({
+			el : '#ovfor',
+			data : {
+				object: {
+		      		FirstName: 'John',
+		      		LastName: 'Doe',
+		      		Age: 30
+		    	}
+			}
+		})
+	</script>
+</html>

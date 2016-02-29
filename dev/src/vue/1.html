@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue入门</title>
+	</head>
+	<body>
+		<h1>数据绑定</h1>
+		<div id="app">
+			{{message}}
+			<input type="text" v-model="message" />
+		</div>
+		<h2>列表</h2>
+		<div id="list">
+			<ul>
+				<li v-for="o in sources">
+					{{o.name}}
+				</li>
+			</ul>
+		</div>
+		<h1>事件处理</h1>
+		<div id="event">
+			<p>{{sum}}</p>
+			<input type="text" v-model="num" />
+			<button v-on:click="add">add</button>
+		</div>
+		<h3>绑定多个。。。。。</h3>
+		<div class="app">
+			<p>{{message}}</p>
+			<input type="text" v-model="message" />
+		</div>
+		<div class="app">
+			<p>{{message}}</p>
+		</div>
+		
+		<h1>综合</h1>
+		<div id="all">
+			<input type="text" v-model="newTodo" v-on:keyup.enter="addTodo" />
+			<ul>
+				<li v-for="todo in todos">
+					<span>{{todo.text}}</span>
+					<button v-on:click="removeTodo($index)">X</button>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//数据绑定
+		new Vue({
+			el:'#app',
+			data: {
+				message:'hello vue.js'
+			}
+		});
+		
+		//列表
+		new Vue({
+			el:'#list',
+			data: {
+				sources:[{name:'aa'},{name:'bb'},{name:'cc'}]
+			}
+		});
+		
+		//事件处理
+		new Vue({
+			el: '#event',
+			data : {
+				sum : 0,
+				num : 0
+			},
+			methods : {
+				add : function(){
+					this.sum += +this.num
+				}
+			}
+		});
+		//绑定多个
+		new Vue({
+			el: '.app',
+			data : {
+				message:'more'
+			}
+		});
+		
+		//综合
+		var vm = new Vue({
+			el: '#all',
+			data : {
+				newTodo : '',
+				todos:[{text:'add 0'}]
+			},
+			methods:{
+				addTodo : function(){
+					var text = this.newTodo.trim();
+					if (text){
+						this.todos.push({text:text});
+						this.newTodo = '';
+					}
+				},
+				removeTodo : function(index){
+					this.todos.splice(index ,1);
+				}
+			}
+		});
+		
+	</script>
+</html>

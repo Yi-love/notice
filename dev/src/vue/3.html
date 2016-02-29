@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Class 和 Style 绑定</title>
+		<style type="text/css">
+			.static{
+				background: #0088C3;
+			}
+			.class-a{
+				color: red;
+			}
+			.class-b{
+				font-size: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Class 和 Style 绑定</h2>
+		<div id="class">
+			<p class="static" v-bind:class="{'class-a':isA , 'class-b':isB}">class 绑定 {'class-a':isA , 'class-b':isB}</p>
+			<p v-bind:class="classObj">classObject</p>
+			<p v-bind:class="[classA,classB]">[classA , classB]</p>
+			<p v-bind:class="[classA , isB ? classB : '']">[classA]</p>
+		</div>
+		
+		<h2>v-bind:style 与 class用法一样</h2>
+	</body>
+	<script src="vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#class',
+			data : {
+				isA:true,
+				isB:false,
+				classObj :{
+					'class-a':true,
+					'class-b' : false
+				},
+				classA:'class-a',
+				classB:'class-b'
+			}
+		});
+		
+	</script>
+</html>
